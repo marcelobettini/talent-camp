@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-box</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            gap: 10px;
+
+            justify-content: space-evenly;
+            width: 100vw;
+            height: 500px;
+            column-gap: .3rem;
+            background-color: cadetblue;
+            overflow: auto;
+
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            padding: 1rem;
+            flex-basis: 100px;
+
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">e</div>
+        <div class="box">f</div>
+        <div class="box">g</div>
+        <div class="box">h</div>
+        <div class="box">i</div>
+        <div class="box">j</div>
+        <div class="box">k</div>
+    </div>
+
+
+</body>
+
+</html>

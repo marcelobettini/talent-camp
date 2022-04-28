@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Elementos Semánticos // W3C's-->
+    <!-- Con los elementos semánticos les hablamos a los devs pero también (y esto es sùper importante) a los browsers -->
+
+    <!-- SECTION define una sección en un documento // GRUPO TEMÁTICO DE CONTENIDO típicamente... lleva un heading h1, h2... // usos frecuentes: CAPÍTULO, INTRODUCCIÓN, INFO DE CONTACTO, SECCIÓN DE NOTICIAS O NOVEDADES-->
+
+    <!-- ARTICLE  elemento que especifica contenido independiente que tiene sentido por sí mismo. Puede estar fuera de un section. // usos frecuentes: Posteos de un Blog, cards de productos en un e-commerce, artículos en un diario-->
+
+    <!-- ASIDE Se considera que su contenido está relacionado (lateral) con el tema central del documento, no es tan importante aside en tanto su ubicación sino su contenido, lateral, secundario, etc... -->
+
+    <!-- Especifica el contenido principal del documento -->
+    <main>
+
+        <article>
+            <h1>titulo</h1>
+            <p>texto</p>
+        </article>
+
+        <section>
+            <article>
+                <h1>titulo</h1>
+                <p>texto</p>
+            </article>
+            <article>
+                <h1>titulo</h1>
+                <p>texto</p>
+
+            </article>
+            <article>
+                <header>
+                    <h1>titulo</h1>
+                    <p>texto</p>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos mollitia dolor modi perferendis
+                    perspiciatis aperiam alias iusto aspernatur sed, cupiditate libero tempora veniam! Illo porro optio
+                    nulla perspiciatis sit molestias.</p>
+                <footer>Cosme Fulanito</footer>
+            </article>
+        </section>
+
+        <!-- esta etiqueta referencia un elemento autocontenido (como article), usada habitualmente para ilustraciones, fotos, diagramas o snippets de código. Figcaption define un pie de imagen para el elemento Figure, mientras que image se encarga de la imagen propiamente dicha -->
+        <figure>
+            <img src="https://picsum.photos/id/237/200/300" alt="random image from Lorem Picsum">
+            <figcaption>Ornitorrinco bla bla bla</figcaption>
+        </figure>
+
+        <aside>
+            <p>Con los y las colegas del Full Stack Talent Camp fuimos a La Taberna de Don Chicho y comimos vegetales a
+                la
+                parrilla, porque la carne está un poco salada, y no de sazón precisamente... Lorem ipsum dolor, sit amet
+                consectetur adipisicing elit. Sunt, odio? Dignissimos exercitationem ea error laboriosam ipsam ratione,
+                deleniti nobis explicabo tempora quod laborum voluptatum quasi mollitia deserunt neque expedita ex.</p>
+            <aside>
+                <h5>La taberna de Don Chico</h5>
+                <p>es un lugar que tal cosa</p>
+            </aside>
+        </aside>
+
+
+        <h3>emojis son caracteres, no imágenes ni íconos</h3>
+        <p>🤣😄🤩</p>
+        <p>&#128513 </p>
+
+        <figure></figure>
+        <figcaption></figcaption>
+
+        <fieldset>
+            <legend>sdfsfd
+
+            </legend>
+        </fieldset>
+        <form></form>
+        <table></table>
+        <article></article>
+        <aside></aside>
+        <header></header>
+        <nav></nav>
+        <footer></footer>
+        <main></main>
+        <mark></mark>
+        <summary></summary>
+        <time>
+            <code></code>
+
+            <cite></cite>
+
+            <p>este es un párrafo</p>
+
+            <!-- Quote y Blockquote para citar contenido: la primera es para texto muy breve que no requiere un salto de línea, la segunda puede incluir párrafos completos -->
+            <p>El señorito fulano de tal dijo: <q>el que mucho abarca poco aprieta</q> y siguió con lo suyo..</p>
+            <p>Here is a quote from WWF's website:</p>
+            <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                For 50 years, WWF has been protecting the future of nature.
+                The world's leading conservation organization,
+                WWF works in 100 countries and is supported by
+                1.2 million members in the United States and
+                close to 5 million globally.
+            </blockquote>
+    </main>
+
+</body>
+
+</html>
