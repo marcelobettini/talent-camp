@@ -13,3 +13,14 @@ console.table(arr)
 arr.unshift("tercer plato")
 console.table(arr)
 
+
+const multi = [
+    ["a", "b", "c"],
+    ["d", "e"],
+    ["f", "j", "l"]
+]
+
+for (let i = 0; i < multi.length; i++) {
+
+}
+console.log(multi[i][j])

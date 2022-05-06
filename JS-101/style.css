@@ -1,0 +1,10 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.card {
+    border: 1px solid;
+    box-shadow: 3px 3px 6px;
+}
