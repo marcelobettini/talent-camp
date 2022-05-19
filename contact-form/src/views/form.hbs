@@ -3,16 +3,24 @@
     <div class="col-10 col-md-8 col-lg-6">
 
         <form class="my-5" action="/contact" method="post">
+            {{#each arrWarnings}}
+            <div class="alert alert-danger" role="alert">
+                {{msg}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {{/each}}
             <fieldset>
                 <legend>Contame tus penas</legend>
             </fieldset>
 
             <label class="form-label mt-3" for="nombre">Nombre</label>
-            <input class="form-control" id="nombre" type="text" name="name" autofocus>
+            <input class="form-control" id="nombre" type="text" name="name" autofocus value="{{formData.name}}">
+
             <label class="form-label mt-3" for="email">email</label>
-            <input class="form-control" id="email" type="text" name="email">
+            <input class="form-control" id="email" type="text" name="email" value="{{formData.email}}">
             <label class="form-label mt-3" for="message">mensaje</label>
-            <textarea class="form-control" rows="5" id="message" type="text" name="message"></textarea>
+            <textarea class="form-control" rows="10" cols="30" id="message" type="text"
+                name="message">{{formData.message}}</textarea>
 
             <label class="form-label mt-3" for="area">Seleccione un departamento</label>
             <select class="form-select" name="area" id="area">
