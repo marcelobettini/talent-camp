@@ -1,5 +1,4 @@
 const section = document.querySelector("section")
-
 let characters = []
 
 fetch('https://finalspaceapi.com/api/v0/character')
