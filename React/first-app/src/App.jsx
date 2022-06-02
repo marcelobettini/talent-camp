@@ -1,6 +1,5 @@
 import "./App.css";
-import Counter from "./components/Counter";
-
+import Characters from "./components/Characters";
 function App() {
   const message = "React Playground";
   return (
@@ -8,7 +7,7 @@ function App() {
       <h1>{message ? message : "chau mundo"}</h1>
       <h4>componente App</h4>
 
-      <Counter />
+      <Characters />
     </>
   );
 }
