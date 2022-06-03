@@ -4,3 +4,9 @@ body {
 .para {
   color: tomato;
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  justify-content: space-evenly;
+}
