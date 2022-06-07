@@ -1,10 +1,23 @@
+let globalData = {
+    name: "Pirulo",
+    email: "uncorreo",
+    alive: false,
+    age: 1900,
+    knickname: "Moon Ra"
+}
+
 const express = require("express") //common js
 const path = require("path")
 const homeRouter = require("./src/routes/home.js")
+const practicandoRouter = require("./src/routes/practicando")
 const PORT = process.env.PORT || 3000 //env = environment (variables de ambiente o de entorno)
 const hbs = require("express-handlebars")
+const { validationResult } = require("express-validator")
 require("dotenv").config();
 const app = express()
+app.set("global", globalData)
+
+
 
 //HBS Config
 app.engine(".hbs", hbs.engine({ extname: "hbs" }));
@@ -21,6 +34,7 @@ app.use(express.urlencoded({ extended: true }))
 //Enrutamiento de las request (peticiones). Aquí indicamos qué archivo procesará las peticiones a las rutas de nuestra app
 app.use("/", homeRouter) //podemos indicar el enrutador de este modo, con la declaración de la línea 2
 app.use("/contact", require("./src/routes/contact.js"))// o hacerlo directamente aquí
+app.use("/practicando", practicandoRouter)
 
 
 

@@ -1,8 +1,14 @@
 <!-- contact form -->
 <div class="row justify-content-center mt-5 bg-aquamarine" id="contact">
     <div class="col-10 col-md-8 col-lg-6">
-
+        {{message}}
         <form class="my-5" action="/contact" method="post">
+            {{#if sendStatus}}
+            <div class="alert alert-warning alertd-dismissable fade show" role="alert">
+                {{sendStatus}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {{/if}}
             {{#each arrWarnings}}
             <div class="alert alert-danger" role="alert">
                 {{msg}}
