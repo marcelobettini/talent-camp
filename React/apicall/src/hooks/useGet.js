@@ -12,7 +12,6 @@ export const useGet = (endpoint) => {
     const getData = async (endpoint) => {
         try {
             const { data } = await API.get(endpoint)
-            console.log(data);
             setData(data.results)
             setTimeout(() => setLoading(false), 2000)
         } catch (error) {
