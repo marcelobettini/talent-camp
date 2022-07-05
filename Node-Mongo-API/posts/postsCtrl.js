@@ -1,11 +1,33 @@
+const Post = require("./postsModel")
 //Create a post
 const create = (req, res) => {
-    res.send("Add document")
+    const newPost = new Post({ ...req.body })
+    newPost.save((error) => {
+        if (error) {
+            console.log(error);
+        } else res.status(201).json({ message: "new post created" })
+    })
+
 }
 //Get all posts
 const getAll = (req, res) => {
-    res.send("List all documents")
+    Post.find()
+        .then((data) => {
+            res.status(200).json(data)
+        })
+        .catch((error) => res.status(500).json({ message: error }))
 }
+
+//Get post by title (query string search)
+const getByTitle = (req, res) => {
+    const { query } = req.params;
+    Post.find({ $text: { $search: query } }, (error, result) => {
+        if (error) return res.sendStatus()
+        result.length ? res.status(200).send(result) : res.status(404).send("post not found")
+    })
+}
+
+
 
 //Get post by id
 const getOne = (req, res) => {
@@ -24,4 +46,4 @@ const deleteOne = (req, res) => {
     res.send(`Delete a specific document by its ID: ${id}`)
 
 }
-module.exports = { create, getAll, getOne, modifyOne, deleteOne }
+module.exports = { create, getAll, getByTitle, getOne, modifyOne, deleteOne }
